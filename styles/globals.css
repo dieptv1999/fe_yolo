@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.img-container {
+    width: 632px;
+    height: 355px;
+    object-fit: cover;
+}
