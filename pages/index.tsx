@@ -66,11 +66,21 @@ export default function Home() {
               />
             </div>
           </div>
+          <div className="flex flex-col mb-2">
+            <div className="flex">
+              <img src={`${BASE_URL}/video_feed/camera/3`} className="center img-container mr-2"/>
+              <img src={`${BASE_URL}/video_feed/yolo/3`}
+                   className={`center img-container ml-2 ${_.get(data, 'yolo3') >= 1 && 'border-4 border-red-400'}`}
+                   onClick={() => setActive(2)}
+              />
+            </div>
+          </div>
         </div>
         <div className="w-80 flex flex-col items-center text-lg font-semibold">
           <div className={`${_.get(data, 'yolo0') >= 1 && 'text-red-400'}`}>Camera 1: {_.get(data, 'yolo0') || 0}</div>
           <div className={`${_.get(data, 'yolo1') >= 1 && 'text-red-400'}`}>Camera 2: {_.get(data, 'yolo1') || 0}</div>
           <div className={`${_.get(data, 'yolo2') >= 1 && 'text-red-400'}`}>Camera 3: {_.get(data, 'yolo2') || 0}</div>
+          <div className={`${_.get(data, 'yolo3') >= 1 && 'text-red-400'}`}>Camera 4: {_.get(data, 'yolo3') || 0}</div>
         </div>
       </div>
       <div className={`fixed w-screen h-screen top-0 left-0 ${active > -1 ? 'flex' : 'hidden'}`} onClick={() => setActive(-1)}>
