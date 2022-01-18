@@ -71,7 +71,7 @@ export default function Home() {
               <img src={`${BASE_URL}/video_feed/camera/3`} className="center img-container mr-2"/>
               <img src={`${BASE_URL}/video_feed/yolo/3`}
                    className={`center img-container ml-2 ${_.get(data, 'yolo3') >= 1 && 'border-4 border-red-400'}`}
-                   onClick={() => setActive(2)}
+                   onClick={() => setActive(3)}
               />
             </div>
           </div>
